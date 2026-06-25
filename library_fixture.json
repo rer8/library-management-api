@@ -1,0 +1,202 @@
+[
+{
+"model": "library.genre",
+"pk": 1,
+"fields": {
+"name": "Classic",
+"description": "Класична література"
+}
+},
+{
+"model": "library.genre",
+"pk": 2,
+"fields": {
+"name": "Science Fiction",
+"description": "Наукова фантастика"
+}
+},
+{
+"model": "library.genre",
+"pk": 3,
+"fields": {
+"name": "Fantasy",
+"description": "Фентезі"
+}
+},
+{
+"model": "library.genre",
+"pk": 4,
+"fields": {
+"name": "Historical Fiction",
+"description": "Історичні романи"
+}
+},
+{
+"model": "library.genre",
+"pk": 5,
+"fields": {
+"name": "Poetry",
+"description": "Поезія"
+}
+},
+
+{
+"model": "library.author",
+"pk": 1,
+"fields": {
+"first_name": "Іван",
+"last_name": "Франко",
+"birth_date": "1856-08-27",
+"biography": "Український письменник і громадський діяч."
+}
+},
+{
+"model": "library.author",
+"pk": 2,
+"fields": {
+"first_name": "Леся",
+"last_name": "Українка",
+"birth_date": "1871-02-25",
+"biography": "Українська поетеса та драматургиня."
+}
+},
+{
+"model": "library.author",
+"pk": 3,
+"fields": {
+"first_name": "Тарас",
+"last_name": "Шевченко",
+"birth_date": "1814-03-09",
+"biography": "Національний поет України."
+}
+},
+{
+"model": "library.author",
+"pk": 4,
+"fields": {
+"first_name": "Ліна",
+"last_name": "Костенко",
+"birth_date": "1930-03-19",
+"biography": "Українська поетеса."
+}
+},
+
+{
+"model": "library.book",
+"pk": 1,
+"fields": {
+"title": "Захар Беркут",
+"authors": [1],
+"genres": [1,4],
+"cover": "HARD",
+"inventory": 5,
+"daily_fee": "0.50",
+"published_year": 1883,
+"description": "Історична повість."
+}
+},
+{
+"model": "library.book",
+"pk": 2,
+"fields": {
+"title": "Борислав сміється",
+"authors": [1],
+"genres": [1],
+"cover": "SOFT",
+"inventory": 4,
+"daily_fee": "0.55",
+"published_year": 1881,
+"description": "Соціальний роман."
+}
+},
+{
+"model": "library.book",
+"pk": 3,
+"fields": {
+"title": "Лісова пісня",
+"authors": [2],
+"genres": [3],
+"cover": "HARD",
+"inventory": 6,
+"daily_fee": "0.60",
+"published_year": 1911,
+"description": "Драма-феєрія."
+}
+},
+{
+"model": "library.book",
+"pk": 4,
+"fields": {
+"title": "Кобзар",
+"authors": [3],
+"genres": [5],
+"cover": "HARD",
+"inventory": 10,
+"daily_fee": "0.45",
+"published_year": 1840,
+"description": "Збірка поезій."
+}
+},
+{
+"model": "library.book",
+"pk": 5,
+"fields": {
+"title": "Маруся Чурай",
+"authors": [4],
+"genres": [4,5],
+"cover": "HARD",
+"inventory": 7,
+"daily_fee": "0.70",
+"published_year": 1979,
+"description": "Історичний роман у віршах."
+}
+},
+
+{
+"model": "library.borrowing",
+"pk": 1,
+"fields": {
+"book": 1,
+"user": 2,
+"borrow_date": "2026-05-01",
+"expected_return_date": "2026-05-15",
+"actual_return_date": "2026-05-12",
+"status": "RETURNED",
+"notes": "Книга дуже сподобалась."
+}
+},
+{
+"model": "library.borrowing",
+"pk": 2,
+"fields": {
+"book": 3,
+"user": 3,
+"borrow_date": "2026-06-01",
+"expected_return_date": "2026-06-15",
+"actual_return_date": null,
+"status": "OVERDUE",
+"notes": "Потрібне продовження терміну."
+}
+},
+
+{
+"model": "library.review",
+"pk": 1,
+"fields": {
+"book": 1,
+"user": 2,
+"rating": 5,
+"comment": "Один з найкращих історичних творів."
+}
+},
+{
+"model": "library.review",
+"pk": 2,
+"fields": {
+"book": 3,
+"user": 3,
+"rating": 5,
+"comment": "Дуже атмосферний твір."
+}
+}
+]
