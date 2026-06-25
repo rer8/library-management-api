@@ -1,202 +1,152 @@
 [
-{
-"model": "library.genre",
-"pk": 1,
-"fields": {
-"name": "Classic",
-"description": "Класична література"
-}
-},
-{
-"model": "library.genre",
-"pk": 2,
-"fields": {
-"name": "Science Fiction",
-"description": "Наукова фантастика"
-}
-},
-{
-"model": "library.genre",
-"pk": 3,
-"fields": {
-"name": "Fantasy",
-"description": "Фентезі"
-}
-},
-{
-"model": "library.genre",
-"pk": 4,
-"fields": {
-"name": "Historical Fiction",
-"description": "Історичні романи"
-}
-},
-{
-"model": "library.genre",
-"pk": 5,
-"fields": {
-"name": "Poetry",
-"description": "Поезія"
-}
-},
-
-{
-"model": "library.author",
-"pk": 1,
-"fields": {
-"first_name": "Іван",
-"last_name": "Франко",
-"birth_date": "1856-08-27",
-"biography": "Український письменник і громадський діяч."
-}
-},
-{
-"model": "library.author",
-"pk": 2,
-"fields": {
-"first_name": "Леся",
-"last_name": "Українка",
-"birth_date": "1871-02-25",
-"biography": "Українська поетеса та драматургиня."
-}
-},
-{
-"model": "library.author",
-"pk": 3,
-"fields": {
-"first_name": "Тарас",
-"last_name": "Шевченко",
-"birth_date": "1814-03-09",
-"biography": "Національний поет України."
-}
-},
-{
-"model": "library.author",
-"pk": 4,
-"fields": {
-"first_name": "Ліна",
-"last_name": "Костенко",
-"birth_date": "1930-03-19",
-"biography": "Українська поетеса."
-}
-},
-
-{
-"model": "library.book",
-"pk": 1,
-"fields": {
-"title": "Захар Беркут",
-"authors": [1],
-"genres": [1,4],
-"cover": "HARD",
-"inventory": 5,
-"daily_fee": "0.50",
-"published_year": 1883,
-"description": "Історична повість."
-}
-},
-{
-"model": "library.book",
-"pk": 2,
-"fields": {
-"title": "Борислав сміється",
-"authors": [1],
-"genres": [1],
-"cover": "SOFT",
-"inventory": 4,
-"daily_fee": "0.55",
-"published_year": 1881,
-"description": "Соціальний роман."
-}
-},
-{
-"model": "library.book",
-"pk": 3,
-"fields": {
-"title": "Лісова пісня",
-"authors": [2],
-"genres": [3],
-"cover": "HARD",
-"inventory": 6,
-"daily_fee": "0.60",
-"published_year": 1911,
-"description": "Драма-феєрія."
-}
-},
-{
-"model": "library.book",
-"pk": 4,
-"fields": {
-"title": "Кобзар",
-"authors": [3],
-"genres": [5],
-"cover": "HARD",
-"inventory": 10,
-"daily_fee": "0.45",
-"published_year": 1840,
-"description": "Збірка поезій."
-}
-},
-{
-"model": "library.book",
-"pk": 5,
-"fields": {
-"title": "Маруся Чурай",
-"authors": [4],
-"genres": [4,5],
-"cover": "HARD",
-"inventory": 7,
-"daily_fee": "0.70",
-"published_year": 1979,
-"description": "Історичний роман у віршах."
-}
-},
-
-{
-"model": "library.borrowing",
-"pk": 1,
-"fields": {
-"book": 1,
-"user": 2,
-"borrow_date": "2026-05-01",
-"expected_return_date": "2026-05-15",
-"actual_return_date": "2026-05-12",
-"status": "RETURNED",
-"notes": "Книга дуже сподобалась."
-}
-},
-{
-"model": "library.borrowing",
-"pk": 2,
-"fields": {
-"book": 3,
-"user": 3,
-"borrow_date": "2026-06-01",
-"expected_return_date": "2026-06-15",
-"actual_return_date": null,
-"status": "OVERDUE",
-"notes": "Потрібне продовження терміну."
-}
-},
-
-{
-"model": "library.review",
-"pk": 1,
-"fields": {
-"book": 1,
-"user": 2,
-"rating": 5,
-"comment": "Один з найкращих історичних творів."
-}
-},
-{
-"model": "library.review",
-"pk": 2,
-"fields": {
-"book": 3,
-"user": 3,
-"rating": 5,
-"comment": "Дуже атмосферний твір."
-}
-}
+  {
+    "model": "library.genre",
+    "pk": 1,
+    "fields": { "name": "Science Fiction", "description": "Speculative fiction." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 2,
+    "fields": { "name": "Fantasy", "description": "Magical elements." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 3,
+    "fields": { "name": "Dystopian", "description": "Dark futures." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 4,
+    "fields": { "name": "Mystery", "description": "Investigating crime." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 5,
+    "fields": { "name": "Historical Fiction", "description": "Past era." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 6,
+    "fields": { "name": "Biography", "description": "Life description." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 7,
+    "fields": { "name": "Philosophy", "description": "Knowledge and reality." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 8,
+    "fields": { "name": "Classic", "description": "Noteworthy literature." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 9,
+    "fields": { "name": "Cyberpunk", "description": "High tech low life." }
+  },
+  {
+    "model": "library.genre",
+    "pk": 10,
+    "fields": { "name": "Adventure", "description": "Exciting experiences." }
+  },
+  {
+    "model": "library.author",
+    "pk": 1,
+    "fields": { "first_name": "George", "last_name": "Orwell", "birth_date": "1903-06-25", "biography": "English novelist." }
+  },
+  {
+    "model": "library.author",
+    "pk": 2,
+    "fields": { "first_name": "J.R.R.", "last_name": "Tolkien", "birth_date": "1892-01-03", "biography": "Author of LOTR." }
+  },
+  {
+    "model": "library.author",
+    "pk": 3,
+    "fields": { "first_name": "Frank", "last_name": "Herbert", "birth_date": "1920-10-08", "biography": "Creator of Dune." }
+  },
+  {
+    "model": "library.author",
+    "pk": 4,
+    "fields": { "first_name": "Isaac", "last_name": "Asimov", "birth_date": "1920-01-02", "biography": "Sci-fi writer." }
+  },
+  {
+    "model": "library.author",
+    "pk": 5,
+    "fields": { "first_name": "Agatha", "last_name": "Christie", "birth_date": "1890-09-15", "biography": "Detective novelist." }
+  },
+  {
+    "model": "library.author",
+    "pk": 6,
+    "fields": { "first_name": "William", "last_name": "Gibson", "birth_date": "1948-03-17", "biography": "Cyberpunk pioneer." }
+  },
+  {
+    "model": "library.author",
+    "pk": 7,
+    "fields": { "first_name": "Fyodor", "last_name": "Dostoevsky", "birth_date": "1821-11-11", "biography": "Philosophical novelist." }
+  },
+  {
+    "model": "library.author",
+    "pk": 8,
+    "fields": { "first_name": "Marcus", "last_name": "Aurelius", "birth_date": "0121-04-26", "biography": "Roman emperor." }
+  },
+  {
+    "model": "library.author",
+    "pk": 9,
+    "fields": { "first_name": "Ray", "last_name": "Bradbury", "birth_date": "1920-08-22", "biography": "Fantasy author." }
+  },
+  {
+    "model": "library.author",
+    "pk": 10,
+    "fields": { "first_name": "Arthur", "last_name": "Conan Doyle", "birth_date": "1859-05-22", "biography": "Creator of Sherlock." }
+  },
+  {
+    "model": "library.book",
+    "pk": 1,
+    "fields": { "title": "1984", "authors":, "genres":, "cover": "SOFT", "inventory": 5, "daily_fee": "1.50", "published_year": 1949, "description": "Dystopian novel." }
+  },
+  {
+    "model": "library.book",
+    "pk": 2,
+    "fields": { "title": "The Hobbit", "authors":, "genres":, "cover": "HARD", "inventory": 3, "daily_fee": "2.00", "published_year": 1937, "description": "Fantasy novel." }
+  },
+  {
+    "model": "library.book",
+    "pk": 3,
+    "fields": { "title": "Dune", "authors":, "genres":, "cover": "HARD", "inventory": 8, "daily_fee": "2.50", "published_year": 1965, "description": "Sci-fi masterpiece." }
+  },
+  {
+    "model": "library.book",
+    "pk": 4,
+    "fields": { "title": "Foundation", "authors":, "genres":, "cover": "SOFT", "inventory": 4, "daily_fee": "1.75", "published_year": 1951, "description": "Galactic empire." }
+  },
+  {
+    "model": "library.book",
+    "pk": 5,
+    "fields": { "title": "Murder on the Orient Express", "authors":, "genres":, "cover": "SOFT", "inventory": 6, "daily_fee": "1.25", "published_year": 1934, "description": "Poirot case." }
+  },
+  {
+    "model": "library.book",
+    "pk": 6,
+    "fields": { "title": "Neuromancer", "authors":, "genres":, "cover": "SOFT", "inventory": 2, "daily_fee": "2.20", "published_year": 1984, "description": "Cyberpunk novel." }
+  },
+  {
+    "model": "library.book",
+    "pk": 7,
+    "fields": { "title": "Crime and Punishment", "authors":, "genres":, "cover": "HARD", "inventory": 4, "daily_fee": "1.10", "published_year": 1866, "description": "Moral dilemmas." }
+  },
+  {
+    "model": "library.book",
+    "pk": 8,
+    "fields": { "title": "Meditations", "authors":, "genres":, "cover": "HARD", "inventory": 10, "daily_fee": "3.00", "published_year": 180, "description": "Stoic philosophy." }
+  },
+  {
+    "model": "library.book",
+    "pk": 9,
+    "fields": { "title": "Fahrenheit 451", "authors":, "genres":, "cover": "SOFT", "inventory": 7, "daily_fee": "1.50", "published_year": 1953, "description": "Outlawed books." }
+  },
+  {
+    "model": "library.book",
+    "pk": 10,
+    "fields": { "title": "A Study in Scarlet", "authors":, "genres":, "cover": "SOFT", "inventory": 5, "daily_fee": "1.25", "published_year": 1887, "description": "Sherlock Holmes." }
+  }
 ]
