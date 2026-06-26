@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.utils import timezone
-from .models import Genre, Author, Book, Borrowing, Review
+from library.models import Genre, Author, Book, Borrowing, Review
 
 
 class GenreSerializer(serializers.ModelSerializer):
@@ -85,6 +85,7 @@ class BorrowingSerializer(serializers.ModelSerializer):
     book_title = serializers.CharField(source="book.title", read_only=True)
     user_email = serializers.CharField(source="user.email", read_only=True)
     fine = serializers.SerializerMethodField()
+
 
     class Meta:
         model = Borrowing

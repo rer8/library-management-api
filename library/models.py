@@ -77,7 +77,7 @@ class Borrowing(models.Model):
         on_delete=models.CASCADE,
         related_name="borrowings",
     )
-    borrow_date = models.DateField(default=timezone.now)
+    borrow_date = models.DateField(default=timezone.localdate)
     expected_return_date = models.DateField()
     actual_return_date = models.DateField(null=True, blank=True)
     status = models.CharField(max_length=10, choices=Status.choices, default=Status.ACTIVE)

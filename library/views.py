@@ -7,8 +7,8 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from django.utils import timezone
 from drf_spectacular.utils import extend_schema, OpenApiParameter
 
-from .models import Genre, Author, Book, Borrowing, Review
-from .serializers import (
+from library.models import Genre, Author, Book, Borrowing, Review
+from library.serializers import (
     GenreSerializer,
     AuthorSerializer,
     AuthorListSerializer,
@@ -20,8 +20,8 @@ from .serializers import (
     ReturnBorrowingSerializer,
     ReviewSerializer,
 )
-from .filters import BookFilter, BorrowingFilter
-from .permissions import IsAdminOrReadOnly, IsOwnerOrAdmin
+from library.filters import BookFilter, BorrowingFilter
+from library.permissions import IsAdminOrReadOnly, IsOwnerOrAdmin
 
 
 class GenreViewSet(viewsets.ModelViewSet):
