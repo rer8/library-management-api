@@ -86,6 +86,7 @@ class BorrowingSerializer(serializers.ModelSerializer):
     user_email = serializers.CharField(source="user.email", read_only=True)
     fine = serializers.SerializerMethodField()
 
+
     class Meta:
         model = Borrowing
         fields = [
