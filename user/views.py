@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from .serializers import UserRegistrationSerializer, UserProfileSerializer, ChangePasswordSerializer
+from user.serializers import UserRegistrationSerializer, UserProfileSerializer, ChangePasswordSerializer
 
 User = get_user_model()
 

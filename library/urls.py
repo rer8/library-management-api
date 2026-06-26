@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import GenreViewSet, AuthorViewSet, BookViewSet, BorrowingViewSet, ReviewViewSet
+from library.views import GenreViewSet, AuthorViewSet, BookViewSet, BorrowingViewSet, ReviewViewSet
 
 app_name = "library"
 

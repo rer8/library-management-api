@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.utils import timezone
-from .models import Genre, Author, Book, Borrowing, Review
+from library.models import Genre, Author, Book, Borrowing, Review
 
 
 class GenreSerializer(serializers.ModelSerializer):
